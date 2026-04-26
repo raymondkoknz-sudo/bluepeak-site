@@ -468,7 +468,7 @@ export default function Services() {
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10">
             Let's discuss which package is the right fit for your business goals.
           </p>
-          <Link href="/about" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-semibold transition-colors bg-white text-primary hover:bg-white/90 h-14 px-10">
+          <Link href="/about#contact" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-semibold transition-colors bg-white text-primary hover:bg-white/90 h-14 px-10">
             Contact Us to Get Started <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

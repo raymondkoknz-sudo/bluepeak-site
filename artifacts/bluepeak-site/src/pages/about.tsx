@@ -1,8 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Target, Search, ArrowUpRight, Cpu, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    const tryScroll = () => {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+    const t = window.setTimeout(tryScroll, 100);
+    return () => window.clearTimeout(t);
+  }, []);
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
@@ -140,7 +153,7 @@ export default function About() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-background">
+      <section id="contact" className="py-24 bg-background">
         <div className="container px-4 md:px-6 max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

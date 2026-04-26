@@ -75,7 +75,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <Link href="/about" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 px-6 py-2">
+          <Link href="/about#contact" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 px-6 py-2">
             Contact Us
           </Link>
         </div>
@@ -114,7 +114,7 @@ export function Navbar() {
               About & Contact
             </Link>
             <Link 
-              href="/about" 
+              href="/about#contact" 
               className="mt-4 inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium transition-colors bg-primary text-primary-foreground shadow hover:bg-primary/90 h-14 px-8 w-full max-w-xs"
               onClick={() => setMobileMenuOpen(false)}
             >

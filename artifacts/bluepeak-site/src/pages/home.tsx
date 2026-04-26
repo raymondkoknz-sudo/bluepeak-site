@@ -31,7 +31,7 @@ export default function Home() {
                 <Link href="/services" className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 px-8">
                   View Our Packages <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/about" className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8">
+                <Link href="/about#contact" className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8">
                   Contact Us
                 </Link>
               </div>
