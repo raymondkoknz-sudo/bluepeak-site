@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight, BookOpen, Share2, MapPin, Mail, Newspaper, FileText, Megaphone } from "lucide-react";
+import { CheckCircle2, ArrowRight, BookOpen, Share2, MapPin, Mail, Newspaper, FileText, Megaphone, Sparkles } from "lucide-react";
 import teamImg from "@/assets/about-team.jpg";
 import { motion } from "framer-motion";
 
@@ -27,13 +27,25 @@ export default function Home() {
               <p className="text-lg md:text-xl text-muted-foreground max-w-[600px] mx-auto lg:mx-0">
                 We help home service companies grow with weekly content that builds trust and drives leads—without having to write anything themselves.
               </p>
-              <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                <Link href="/services" className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 px-8">
-                  View Our Packages <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-                <Link href="/about#contact" className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8">
-                  Contact Us
-                </Link>
+              <div className="flex flex-col items-center lg:items-start gap-4">
+                <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start w-full">
+                  <Link href="/services" className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 px-8">
+                    View Our Packages <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                  <Link href="/about#contact" className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8">
+                    Contact Us
+                  </Link>
+                </div>
+                <a
+                  href="https://forms.gle/GJURFZs6afUKBjsp7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                >
+                  <Sparkles className="h-4 w-4" />
+                  Not sure which package fits? Get a free recommendation
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </a>
               </div>
             </motion.div>
 
