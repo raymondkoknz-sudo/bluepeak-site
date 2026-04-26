@@ -156,7 +156,7 @@ export default function Services() {
                 <h3 className="text-2xl font-bold text-secondary mb-2">Elite Growth</h3>
                 <div className="text-3xl font-bold text-primary mb-4">$3,500<span className="text-lg text-muted-foreground font-normal">/month</span></div>
                 <p className="text-muted-foreground min-h-[80px]">
-                  Built for established businesses wanting premium visibility, authority, and hands-off marketing support. Includes everything in Authority Growth, plus:
+                  Built for established businesses wanting premium visibility, authority, and hands-off marketing support.
                 </p>
               </div>
               <div className="space-y-4 mb-8 flex-1 w-full">
