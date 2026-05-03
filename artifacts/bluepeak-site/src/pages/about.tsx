@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Target, Search, ArrowUpRight, Cpu, Mail } from "lucide-react";
+import { Target, Search, ArrowUpRight, Cpu, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
@@ -166,39 +166,51 @@ export default function About() {
             </h2>
             <div className="h-1 w-16 bg-primary rounded-full mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground mb-10">
-              Not sure which package fits? We'll gladly point you in the right direction.
-              Send us an email and we'll get back to you shortly.
+              Not sure which package fits? Answer a few quick questions and we'll point you in the right direction — or just send us an email directly.
             </p>
 
-            <div className="bg-card border border-border p-8 md:p-10 rounded-2xl shadow-sm inline-flex flex-col items-center gap-6 w-full max-w-xl">
-              <div className="h-14 w-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                <Mail className="h-7 w-7" />
-              </div>
-
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">
-                  Email Us
-                </p>
+            <div className="grid sm:grid-cols-2 gap-6 w-full">
+              {/* Help Me Choose */}
+              <div className="bg-primary/5 border-2 border-primary rounded-2xl p-8 flex flex-col items-center gap-5 text-center">
+                <div className="h-14 w-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                  <ArrowRight className="h-7 w-7" />
+                </div>
+                <div>
+                  <p className="text-lg font-bold text-secondary mb-1">Not sure where to start?</p>
+                  <p className="text-sm text-muted-foreground">Tell us about your business and we'll recommend the right package for you.</p>
+                </div>
                 <a
-                  href="mailto:hello@bluepeakdigital.co"
-                  className="text-2xl md:text-3xl font-bold text-primary hover:underline break-all"
+                  href="https://forms.gle/GJURFZs6afUKBjsp7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-semibold transition-colors bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 px-8"
                 >
-                  hello@bluepeakdigital.co
+                  Help Me Choose <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
+                <p className="text-xs text-muted-foreground italic">Takes less than 2 minutes</p>
               </div>
 
-              <Button
-                asChild
-                className="h-12 px-8 text-base font-semibold"
-              >
-                <a href="mailto:hello@bluepeakdigital.co">
-                  Send Us an Email
-                </a>
-              </Button>
-
-              <p className="text-sm text-muted-foreground italic">
-                We typically respond within 1 business day.
-              </p>
+              {/* Email Us */}
+              <div className="bg-card border border-border rounded-2xl p-8 flex flex-col items-center gap-5 text-center">
+                <div className="h-14 w-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                  <Mail className="h-7 w-7" />
+                </div>
+                <div>
+                  <p className="text-lg font-bold text-secondary mb-1">Prefer to reach out directly?</p>
+                  <a
+                    href="mailto:hello@bluepeakdigital.co"
+                    className="text-base font-semibold text-primary hover:underline break-all"
+                  >
+                    hello@bluepeakdigital.co
+                  </a>
+                </div>
+                <Button asChild className="w-full h-12 text-sm font-semibold">
+                  <a href="mailto:hello@bluepeakdigital.co">
+                    Send Us an Email
+                  </a>
+                </Button>
+                <p className="text-xs text-muted-foreground italic">We typically respond within 1 business day.</p>
+              </div>
             </div>
           </motion.div>
         </div>
