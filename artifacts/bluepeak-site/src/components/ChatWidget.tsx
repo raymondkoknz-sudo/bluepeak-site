@@ -62,8 +62,32 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([WELCOME]);
   const [input, setInput] = useState("");
   const [streaming, setStreaming] = useState(false);
+  const [showNudge, setShowNudge] = useState(false);
+  const [hasUnread, setHasUnread] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const nudgeTimer = window.setTimeout(() => {
+      setShowNudge(true);
+      setHasUnread(true);
+    }, 18000);
+    return () => window.clearTimeout(nudgeTimer);
+  }, []);
+
+  function openChat() {
+    setOpen(true);
+    setShowNudge(false);
+    setHasUnread(false);
+  }
+
+  function toggleChat() {
+    if (!open) {
+      openChat();
+    } else {
+      setOpen(false);
+    }
+  }
 
   useEffect(() => {
     if (open) {
@@ -260,9 +284,41 @@ export function ChatWidget() {
         )}
       </AnimatePresence>
 
+      {/* Nudge popup */}
+      <AnimatePresence>
+        {showNudge && !open && (
+          <motion.div
+            key="nudge"
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+            transition={{ duration: 0.25 }}
+            className="flex items-start gap-2 bg-white rounded-2xl rounded-br-sm shadow-xl border border-border px-4 py-3 max-w-[260px] cursor-pointer"
+            onClick={openChat}
+          >
+            <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+              <Bot className="h-3.5 w-3.5 text-primary" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold text-secondary leading-snug">
+                Not sure which package is right for you?
+              </p>
+              <p className="text-xs text-muted-foreground mt-0.5">I can help you find the best fit.</p>
+            </div>
+            <button
+              onClick={(e) => { e.stopPropagation(); setShowNudge(false); setHasUnread(false); }}
+              className="text-muted-foreground hover:text-secondary transition-colors shrink-0 mt-0.5"
+              aria-label="Dismiss"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Toggle button */}
       <motion.button
-        onClick={() => setOpen((v) => !v)}
+        onClick={toggleChat}
         className="h-14 w-14 rounded-full bg-primary text-white shadow-lg hover:bg-primary/90 flex items-center justify-center transition-colors relative"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -284,6 +340,22 @@ export function ChatWidget() {
         {!open && (
           <span className="absolute inset-0 rounded-full ring-2 ring-primary/40 animate-ping" />
         )}
+
+        {/* Unread badge */}
+        <AnimatePresence>
+          {hasUnread && !open && (
+            <motion.span
+              key="badge"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center shadow-md"
+            >
+              1
+            </motion.span>
+          )}
+        </AnimatePresence>
       </motion.button>
     </div>
   );
