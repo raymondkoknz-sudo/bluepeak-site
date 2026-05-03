@@ -14,3 +14,16 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * Sends a message to the AI chatbot and streams back the response via SSE
+ * @summary Send a chat message
+ */
+export const SendChatMessageBody = zod.object({
+  messages: zod.array(
+    zod.object({
+      role: zod.enum(["user", "assistant"]),
+      content: zod.string(),
+    }),
+  ),
+});

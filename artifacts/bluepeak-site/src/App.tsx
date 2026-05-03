@@ -9,6 +9,7 @@ import Home from "@/pages/home";
 import Services from "@/pages/services";
 import About from "@/pages/about";
 import { useEffect } from "react";
+import { ChatWidget } from "@/components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ function App() {
             </main>
             <Footer />
           </div>
+          <ChatWidget />
         </WouterRouter>
         <Toaster />
       </TooltipProvider>
