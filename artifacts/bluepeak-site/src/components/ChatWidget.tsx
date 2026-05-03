@@ -2,6 +2,30 @@ import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Bot, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const URL_REGEX = /(https?:\/\/[^\s]+|\/[a-z][^\s]*)/g;
+
+function renderContent(text: string, isUser: boolean) {
+  const parts = text.split(URL_REGEX);
+  return parts.map((part, i) => {
+    if (URL_REGEX.test(part)) {
+      URL_REGEX.lastIndex = 0;
+      const isExternal = part.startsWith("http");
+      return (
+        <a
+          key={i}
+          href={part}
+          target={isExternal ? "_blank" : "_self"}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          className={`underline underline-offset-2 break-all ${isUser ? "text-white/90 hover:text-white" : "text-primary hover:text-primary/80"}`}
+        >
+          {part}
+        </a>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
 interface Message {
   role: "user" | "assistant";
   content: string;
@@ -174,7 +198,7 @@ export function ChatWidget() {
                     }`}
                     style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}
                   >
-                    {msg.content}
+                    {renderContent(msg.content, msg.role === "user")}
                     {msg.role === "assistant" && msg.content === "" && streaming && (
                       <span className="inline-flex gap-1 items-center ml-1">
                         <span className="w-1 h-1 rounded-full bg-secondary/40 animate-bounce" style={{ animationDelay: "0ms" }} />
