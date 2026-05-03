@@ -69,6 +69,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Social Proof Ticker */}
+      <div className="w-full border-y border-border bg-muted/40 py-3 overflow-hidden">
+        <div className="flex animate-marquee whitespace-nowrap w-max">
+          {[...Array(2)].map((_, pass) =>
+            [
+              { icon: "⚡", text: "7 Content Levers" },
+              { icon: "📰", text: "400+ Media Outlets" },
+              { icon: "✅", text: "100% Done-For-You" },
+              { icon: "✍️", text: "Zero Writing Required" },
+              { icon: "🎯", text: "Local SEO Targeting" },
+              { icon: "🏠", text: "Home Service Specialists" },
+              { icon: "📈", text: "Expert-Written Content" },
+              { icon: "🔒", text: "No Long-Term Contracts" },
+              { icon: "📅", text: "Content Delivered Monthly" },
+              { icon: "💬", text: "Priority Support Included" },
+            ].map((item, i) => (
+              <span key={`${pass}-${i}`} className="inline-flex items-center gap-2 px-6 text-sm font-semibold text-secondary/70">
+                <span className="text-base">{item.icon}</span>
+                {item.text}
+                <span className="text-primary/30 ml-4">◆</span>
+              </span>
+            ))
+          )}
+        </div>
+      </div>
+
       {/* What Is BluePeak */}
       <section className="py-20 bg-secondary text-secondary-foreground">
         <motion.div
