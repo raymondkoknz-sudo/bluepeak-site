@@ -2,28 +2,45 @@ import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Bot, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const URL_REGEX = /(https?:\/\/[^\s]+|\/[a-z][^\s]*)/g;
+const MARKDOWN_LINK_REGEX = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]*)\)/g;
 
 function renderContent(text: string, isUser: boolean) {
-  const parts = text.split(URL_REGEX);
-  return parts.map((part, i) => {
-    if (URL_REGEX.test(part)) {
-      URL_REGEX.lastIndex = 0;
-      const isExternal = part.startsWith("http");
-      return (
-        <a
-          key={i}
-          href={part}
-          target={isExternal ? "_blank" : "_self"}
-          rel={isExternal ? "noopener noreferrer" : undefined}
-          className={`underline underline-offset-2 break-all ${isUser ? "text-white/90 hover:text-white" : "text-primary hover:text-primary/80"}`}
-        >
-          {part}
-        </a>
-      );
+  const result: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  const regex = new RegExp(MARKDOWN_LINK_REGEX.source, "g");
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      result.push(<span key={lastIndex}>{text.slice(lastIndex, match.index)}</span>);
     }
-    return <span key={i}>{part}</span>;
-  });
+    const label = match[1];
+    const href = match[2];
+    const isExternal = href.startsWith("http");
+    result.push(
+      <a
+        key={match.index}
+        href={href}
+        target={isExternal ? "_blank" : "_self"}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        className={
+          isUser
+            ? "inline-flex items-center gap-1 underline underline-offset-2 font-semibold text-white/90 hover:text-white"
+            : "inline-flex items-center gap-1 mt-1 px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-primary/90 transition-colors no-underline"
+        }
+        onClick={(e) => e.stopPropagation()}
+      >
+        {label}
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    result.push(<span key={lastIndex}>{text.slice(lastIndex)}</span>);
+  }
+
+  return result.length > 0 ? result : <span>{text}</span>;
 }
 
 interface Message {
