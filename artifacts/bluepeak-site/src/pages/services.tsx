@@ -216,9 +216,12 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-10">
-              Why This Beats Hiring In-House
-            </h2>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-3">
+                Why This Beats Hiring In-House
+              </h2>
+              <div className="h-1 w-16 bg-primary rounded-full mx-auto"></div>
+            </div>
 
             <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
               <table className="w-full text-sm md:text-base">
