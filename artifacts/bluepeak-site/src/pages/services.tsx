@@ -207,6 +207,58 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Why This Beats Hiring In-House */}
+      <section className="py-24 bg-muted/40 border-y border-border">
+        <div className="container px-4 md:px-6 max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-10">
+              Why This Beats Hiring In-House
+            </h2>
+
+            <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
+              <table className="w-full text-sm md:text-base">
+                <thead>
+                  <tr className="bg-secondary text-white">
+                    <th className="text-left px-6 py-4 font-semibold text-sm uppercase tracking-wider">Option</th>
+                    <th className="text-right px-6 py-4 font-semibold text-sm uppercase tracking-wider">Typical Monthly Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { option: "Hiring a freelancer", cost: "$2,000–$5,000+", muted: false, bold: false },
+                    { option: "Hiring a marketer", cost: "$4,000–$7,000+", muted: false, bold: false },
+                    { option: "Doing it yourself", cost: "Lost evenings + inconsistent results", muted: true, bold: false },
+                  ].map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? "bg-background" : "bg-muted/30"}>
+                      <td className="px-6 py-5 text-secondary/80">{row.option}</td>
+                      <td className={`px-6 py-5 text-right ${row.muted ? "text-muted-foreground italic" : "text-secondary/80"}`}>{row.cost}</td>
+                    </tr>
+                  ))}
+                  {/* BluePeak row — highlighted */}
+                  <tr className="bg-primary/5 border-t-2 border-primary">
+                    <td className="px-6 py-5 font-bold text-primary text-base md:text-lg">BluePeak™</td>
+                    <td className="px-6 py-5 text-right font-bold text-secondary text-base md:text-lg">From $1,500/month</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-8 flex items-start gap-4">
+              <div className="h-px flex-1 bg-border mt-3 shrink-0"></div>
+              <p className="text-base md:text-lg text-muted-foreground italic text-center px-2">
+                Get a consistent content engine without the cost of building one in-house.
+              </p>
+              <div className="h-px flex-1 bg-border mt-3 shrink-0"></div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Compare Packages */}
       <section className="py-24 bg-background border-t border-border">
         <div className="container px-4 md:px-6 max-w-6xl mx-auto">
