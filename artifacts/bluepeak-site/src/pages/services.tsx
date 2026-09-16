@@ -66,9 +66,9 @@ export default function Services() {
                 <ul className="space-y-3 max-w-xs mx-auto">
                   {[
                     { text: "2 Expert Articles per month (500–800 words)", label: "Expert Article Engine™" },
-                    { text: "4 Social Media Posts per month", label: "Social Snippet Stack™" },
+                    { text: "8 Social Media Posts per month", label: "Social Snippet Stack™" },
                     { text: "1 Local SEO Page per month", label: "Local SEO Asset Stack™" },
-                    { text: "1 Email per month", label: "Weekly Email Echo™" },
+                    { text: "2 Marketing Emails per month", label: "Weekly Email Echo™" },
                     { text: "Email Support", label: "Questions, updates, and revision requests via email" },
                     { text: "Monthly content delivery summary" }
                   ].map((feature, i) => (
@@ -114,9 +114,9 @@ export default function Services() {
                 <ul className="space-y-3 max-w-xs mx-auto">
                   {[
                     { text: "4 Expert Articles per month (500–800 words)", label: "Expert Article Engine™" },
-                    { text: "8 Social Media Posts per month", label: "Social Snippet Stack™" },
+                    { text: "12 Social Media Posts per month", label: "Social Snippet Stack™" },
                     { text: "2 Local SEO Pages per month", label: "Local SEO Asset Stack™" },
-                    { text: "2 Emails per month", label: "Weekly Email Echo™" },
+                    { text: "4 Marketing Emails per month", label: "Weekly Email Echo™" },
                     { text: "1 Newsletter per month", label: "Trust Builder Newsletter™" },
                     { text: "1 Press Release per quarter (400+ site distribution)", label: "Authority Press Release™" },
                     { text: "Priority Email Support", label: "Faster responses for requests, updates, and content guidance" },
@@ -165,8 +165,8 @@ export default function Services() {
                   {[
                     { text: "1 Press Release per month (400+ media sites)", label: "Authority Press Release™" },
                     { text: "1 Lead Magnet per quarter", label: "Lead Magnet Writer™" },
-                    { text: "4 additional Social Posts (12 total per month)", label: "Social Snippet Stack™" },
-                    { text: "2 additional Marketing Emails (4 total per month)", label: "Weekly Email Echo™" },
+                    { text: "1 additional Local SEO Page (3 total per month)", label: "Local SEO Asset Stack™" },
+                    { text: "4 additional Social Posts (16 total per month)", label: "Social Snippet Stack™" },
                     { text: "VIP Priority Support", label: "Fastest response times, quicker revisions, and premium client priority" },
                     { text: "Optional monthly Google Meet for strategy/performance review (on request)" },
                     { text: "Monthly content growth plan + expansion recommendations" }
@@ -218,7 +218,7 @@ export default function Services() {
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-3">
-                Why This Beats Hiring In-House
+                Consistent Content Without the Cost of Hiring In-House
               </h2>
               <div className="h-1 w-16 bg-primary rounded-full mx-auto"></div>
             </div>
@@ -228,14 +228,14 @@ export default function Services() {
                 <thead>
                   <tr className="bg-secondary text-white">
                     <th className="text-left px-6 py-4 font-semibold text-sm uppercase tracking-wider">Option</th>
-                    <th className="text-right px-6 py-4 font-semibold text-sm uppercase tracking-wider">Typical Monthly Cost</th>
+                    <th className="text-right px-6 py-4 font-semibold text-sm uppercase tracking-wider">Cost or Commitment</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { option: "Hiring a freelancer", cost: "$2,000–$5,000+", muted: false, bold: false },
-                    { option: "Hiring a marketer", cost: "$4,000–$7,000+", muted: false, bold: false },
-                    { option: "Doing it yourself", cost: "Lost evenings + inconsistent results", muted: true, bold: false },
+                    { option: "Hiring freelancers", cost: "Varies by scope, experience, and number of specialists", muted: false, bold: false },
+                    { option: "Hiring a full-time marketer", cost: "Salary, benefits, recruitment, and management", muted: false, bold: false },
+                    { option: "Doing it yourself", cost: "Your time spent planning, writing, and editing", muted: false, bold: false },
                   ].map((row, i) => (
                     <tr key={i} className={i % 2 === 0 ? "bg-background" : "bg-muted/30"}>
                       <td className="px-6 py-5 text-secondary/80">{row.option}</td>
@@ -245,7 +245,7 @@ export default function Services() {
                   {/* BluePeak row — highlighted */}
                   <tr className="bg-primary/5 border-t-2 border-primary">
                     <td className="px-6 py-5 font-bold text-primary text-base md:text-lg">BluePeak™</td>
-                    <td className="px-6 py-5 text-right font-bold text-secondary text-base md:text-lg">From $1,500/month</td>
+                    <td className="px-6 py-5 text-right font-bold text-secondary text-base md:text-lg">Defined monthly content packages from $1,500 USD</td>
                   </tr>
                 </tbody>
               </table>
@@ -308,9 +308,9 @@ export default function Services() {
               <tbody>
                 {[
                   { feature: "Expert Articles", brand: "Expert Article Engine™", core: "2 / mo", authority: "4 / mo", elite: "4 / mo" },
-                  { feature: "Social Media Posts", brand: "Social Snippet Stack™", core: "4 / mo", authority: "8 / mo", elite: "12 / mo" },
-                  { feature: "Local SEO Pages", brand: "Local SEO Asset Stack™", core: "1 / mo", authority: "2 / mo", elite: "2 / mo" },
-                  { feature: "Marketing Emails", brand: "Weekly Email Echo™", core: "1 / mo", authority: "2 / mo", elite: "4 / mo" },
+                  { feature: "Social Media Posts", brand: "Social Snippet Stack™", core: "8 / mo", authority: "12 / mo", elite: "16 / mo" },
+                  { feature: "Local SEO Pages", brand: "Local SEO Asset Stack™", core: "1 / mo", authority: "2 / mo", elite: "3 / mo" },
+                  { feature: "Marketing Emails", brand: "Weekly Email Echo™", core: "2 / mo", authority: "4 / mo", elite: "4 / mo" },
                   { feature: "Newsletter", brand: "Trust Builder Newsletter™", core: "—", authority: "1 / mo", elite: "1 / mo" },
                   { feature: "Press Release", brand: "Authority Press Release™", core: "—", authority: "1 / quarter", elite: "1 / mo" },
                   { feature: "Lead Magnet", brand: "Lead Magnet Writer™", core: "—", authority: "—", elite: "1 / quarter" },
