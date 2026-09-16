@@ -485,8 +485,8 @@ export default function Services() {
                 a: "About one week. You fill out a simple onboarding form covering your services, voice, and target areas — no calls required — and we deliver your first content in the second week."
               },
               {
-                q: "Do I have to write or approve every piece of content?",
-                a: "No. That's the whole point — it's done-for-you. You'll get a simple monthly review so you can flag anything, but most clients let us run with it after the first month."
+                q: "Who reviews and publishes the content?",
+                a: "We handle the research and writing. You review the finished content for business-specific details, accuracy, offers, and any important updates before publishing. You don't need to write the content yourself, but you remain in control of final approval and publishing."
               },
               {
                 q: "What if I want to cancel?",
