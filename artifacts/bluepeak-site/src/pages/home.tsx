@@ -284,7 +284,7 @@ export default function Home() {
                 {[
                   { title: "Choose Your Package & Onboard", desc: "Select your plan and complete a short onboarding form" },
                   { title: "Writing & Delivery", desc: "We create and deliver your weekly and monthly content assets" },
-                  { title: "Monthly Check-Ins", desc: "We review performance, refine strategy, and double down on what works" },
+                  { title: "Content Reviews & Planning", desc: "We review the month’s delivered content, collect business updates, and plan upcoming topics and priorities." },
                   { title: "You Stay Focused on the Work", desc: "While BluePeak™ keeps your marketing moving consistently" }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-6 text-left">
