@@ -68,7 +68,7 @@ export default function Services() {
                     { text: "2 Expert Articles per month (500–800 words)", label: "Expert Article Engine™" },
                     { text: "8 Social Media Posts per month", label: "Social Snippet Stack™" },
                     { text: "1 Local SEO Page per month", label: "Local SEO Asset Stack™" },
-                    { text: "2 Marketing Emails per month", label: "Weekly Email Echo™" },
+                    { text: "2 Marketing Emails per month", label: "Marketing Email Echo™" },
                     { text: "Email Support", label: "Questions, updates, and revision requests via email" },
                     { text: "Monthly content delivery summary" }
                   ].map((feature, i) => (
@@ -100,13 +100,13 @@ export default function Services() {
               className="flex flex-col h-full p-8 rounded-2xl border-2 border-primary bg-primary/5 shadow-xl relative transform lg:-translate-y-4 scroll-mt-32 text-center items-center"
             >
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1.5 shadow-lg">
-                <Star className="w-4 h-4 fill-current" /> MOST POPULAR
+                <Star className="w-4 h-4 fill-current" /> RECOMMENDED
               </div>
               <div className="mb-6 mt-4 w-full">
                 <h3 className="text-2xl font-bold text-secondary mb-2">Authority Growth</h3>
                 <div className="text-3xl font-bold text-primary mb-4">$2,500<span className="text-lg text-muted-foreground font-normal">/month</span></div>
                 <p className="text-secondary/80 min-h-[80px] font-medium">
-                  Our most popular package for businesses ready to grow consistently and look like the trusted local leader.
+                  Our recommended package for businesses ready to grow consistently and look like the trusted local leader.
                 </p>
               </div>
               <div className="space-y-4 mb-8 flex-1 w-full">
@@ -116,7 +116,7 @@ export default function Services() {
                     { text: "4 Expert Articles per month (500–800 words)", label: "Expert Article Engine™" },
                     { text: "12 Social Media Posts per month", label: "Social Snippet Stack™" },
                     { text: "2 Local SEO Pages per month", label: "Local SEO Asset Stack™" },
-                    { text: "4 Marketing Emails per month", label: "Weekly Email Echo™" },
+                    { text: "4 Marketing Emails per month", label: "Marketing Email Echo™" },
                     { text: "1 Newsletter per month", label: "Trust Builder Newsletter™" },
                     { text: "1 Press Release per quarter (400+ site distribution)", label: "Authority Press Release™" },
                     { text: "Priority Email Support", label: "Faster responses for requests, updates, and content guidance" },
@@ -310,7 +310,7 @@ export default function Services() {
                   { feature: "Expert Articles", brand: "Expert Article Engine™", core: "2 / mo", authority: "4 / mo", elite: "4 / mo" },
                   { feature: "Social Media Posts", brand: "Social Snippet Stack™", core: "8 / mo", authority: "12 / mo", elite: "16 / mo" },
                   { feature: "Local SEO Pages", brand: "Local SEO Asset Stack™", core: "1 / mo", authority: "2 / mo", elite: "3 / mo" },
-                  { feature: "Marketing Emails", brand: "Weekly Email Echo™", core: "2 / mo", authority: "4 / mo", elite: "4 / mo" },
+                  { feature: "Marketing Emails", brand: "Marketing Email Echo™", core: "2 / mo", authority: "4 / mo", elite: "4 / mo" },
                   { feature: "Newsletter", brand: "Trust Builder Newsletter™", core: "—", authority: "1 / mo", elite: "1 / mo" },
                   { feature: "Press Release", brand: "Authority Press Release™", core: "—", authority: "1 / quarter", elite: "1 / mo" },
                   { feature: "Lead Magnet", brand: "Lead Magnet Writer™", core: "—", authority: "—", elite: "1 / quarter" },
@@ -425,8 +425,8 @@ export default function Services() {
                 },
                 {
                   marker: "Week 2",
-                  title: "First content goes live",
-                  desc: "Articles, social posts, and SEO pages start publishing on your schedule — no extra input needed from you."
+                  title: "First content delivered for review",
+                  desc: "Articles, social posts, and SEO pages are delivered for you to review and publish on your schedule."
                 },
                 {
                   marker: "Ongoing",
