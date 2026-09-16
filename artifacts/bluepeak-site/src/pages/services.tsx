@@ -482,7 +482,7 @@ export default function Services() {
               },
               {
                 q: "How long does onboarding take?",
-                a: "About one week. You fill out a simple onboarding form covering your services, voice, and target areas — no calls required — and we start publishing in your second week."
+                a: "About one week. You fill out a simple onboarding form covering your services, voice, and target areas — no calls required — and we deliver your first content in the second week."
               },
               {
                 q: "Do I have to write or approve every piece of content?",
