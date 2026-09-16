@@ -68,10 +68,10 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary">What We Deliver</h2>
             <div className="h-1 w-16 bg-primary rounded-full !mt-3 mx-auto"></div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              BluePeak™ is a done-for-you content system built specifically for home service companies such as HVAC, plumbing, roofing, pest control, landscaping, electrical, and cleaning businesses. We create <span className="font-semibold text-secondary">educational blog posts, local SEO pages, social content, emails, lead magnets, and website copy</span> that position you as the trusted expert in your market.
+              BluePeak™ is a done-for-you content system built specifically for home service companies such as HVAC, plumbing, roofing, pest control, landscaping, electrical, and cleaning businesses. We create <span className="font-semibold text-secondary">educational blog posts, local SEO pages, social content, emails, and lead magnets</span> that position you as the trusted expert in your market.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our 7-layer writing system is designed to help you rank locally, stay top-of-mind with prospects, and generate more booked jobs—without marketing guesswork or wasting time creating content yourself. <span className="font-semibold text-secondary">We write it all. You stay focused on running the business.</span>
+              Our 7-layer writing system is designed to help you rank locally, stay top-of-mind with prospects, and generate more booked jobs—without marketing guesswork or wasting time creating content yourself. <span className="font-semibold text-secondary">We create the content included in your package. You stay focused on running the business.</span>
             </p>
             <div className="pt-4">
               <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Industries we serve</div>
