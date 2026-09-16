@@ -478,7 +478,7 @@ export default function Services() {
               },
               {
                 q: "How long until I see results?",
-                a: "Most clients start seeing increased website traffic and engagement within 60–90 days. SEO and authority building compound over time, so the biggest gains usually show up in months 4–6."
+                a: "Results vary depending on your website’s starting point, local competition, and how consistently the content is implemented. SEO and audience engagement build over time, so the timeline differs from business to business. We review performance regularly and adjust the strategy based on what is working."
               },
               {
                 q: "How long does onboarding take?",
