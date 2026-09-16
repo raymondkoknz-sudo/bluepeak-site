@@ -478,7 +478,7 @@ export default function Services() {
               },
               {
                 q: "How long until I see results?",
-                a: "Results vary depending on your website’s starting point, local competition, and how consistently the content is implemented. SEO and audience engagement build over time, so the timeline differs from business to business. We review performance regularly and adjust the strategy based on what is working."
+                a: "Results vary depending on your website’s starting point, local competition, and how consistently the content is implemented. SEO and audience engagement build over time, so the timeline differs from business to business. We review the delivered content and planning priorities regularly, then adjust upcoming topics based on your business updates and goals."
               },
               {
                 q: "How long does onboarding take?",
