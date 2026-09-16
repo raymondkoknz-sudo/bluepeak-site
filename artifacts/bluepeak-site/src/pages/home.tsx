@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, BookOpen, Share2, MapPin, Mail, Newspaper, FileText, Megaphone } from "lucide-react";
-import teamImg from "@/assets/about-team.jpg";
+import contentExamplesImg from "@/assets/content-examples.png";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -45,11 +45,10 @@ export default function Home() {
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative">
                 <img
-                  src={teamImg}
-                  alt="Home service professional team"
+                  src={contentExamplesImg}
+                  alt="Examples of website, social media, checklist, and content calendar deliverables"
                   className="object-cover w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-secondary/40 to-transparent"></div>
               </div>
 
               {/* Floating trust badge */}
@@ -161,7 +160,7 @@ export default function Home() {
               {
                 icon: <Share2 className="h-8 w-8" />,
                 title: "2. Social Snippet Stack™",
-                desc: "Each article broken into 4–6 educational social posts for Facebook, Instagram, or LinkedIn.",
+                desc: "Educational social posts created from your monthly content, with the total tailored to your package.",
                 packages: ["Core", "Authority", "Elite"],
                 href: "/services#core"
               },
@@ -174,7 +173,7 @@ export default function Home() {
               },
               {
                 icon: <Mail className="h-8 w-8" />,
-                title: "4. Weekly Email Echo™",
+                title: "4. Marketing Email Echo™",
                 desc: "Monthly marketing emails that keep leads warm and past customers engaged.",
                 packages: ["Core", "Authority", "Elite"],
                 href: "/services#core"
