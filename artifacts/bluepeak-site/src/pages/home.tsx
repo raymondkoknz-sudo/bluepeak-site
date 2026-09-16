@@ -154,7 +154,7 @@ export default function Home() {
               {
                 icon: <BookOpen className="h-8 w-8" />,
                 title: "1. The Expert Article Engine™",
-                desc: "Weekly 500–800 word search-friendly articles built around real customer searches, local keywords, and high-intent questions.",
+                desc: "Monthly 500–800 word search-friendly articles built around real customer searches, local keywords, and high-intent questions.",
                 packages: ["Core", "Authority", "Elite"],
                 href: "/services#core"
               },
@@ -175,7 +175,7 @@ export default function Home() {
               {
                 icon: <Mail className="h-8 w-8" />,
                 title: "4. Weekly Email Echo™",
-                desc: "One weekly email that keeps leads warm and past customers engaged.",
+                desc: "Monthly marketing emails that keep leads warm and past customers engaged.",
                 packages: ["Core", "Authority", "Elite"],
                 href: "/services#core"
               },
