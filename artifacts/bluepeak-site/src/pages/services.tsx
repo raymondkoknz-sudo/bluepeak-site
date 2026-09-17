@@ -70,7 +70,8 @@ export default function Services() {
                     { text: "1 Local SEO Page per month", label: "Local SEO Asset Stack™" },
                     { text: "2 Marketing Emails per month", label: "Marketing Email Echo™" },
                     { text: "Email Support", label: "Questions, updates, and revision requests via email" },
-                    { text: "Monthly content delivery summary" }
+                    { text: "Monthly content delivery summary" },
+                    { text: "Two rounds of revisions per content item, within the agreed brief." }
                   ].map((feature, i) => (
                     <li key={i} className="flex gap-3 items-start text-left">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -120,7 +121,8 @@ export default function Services() {
                     { text: "1 Newsletter per month", label: "Trust Builder Newsletter™" },
                     { text: "1 Press Release per quarter (400+ site distribution)", label: "Authority Press Release™" },
                     { text: "Priority Email Support", label: "Faster responses for requests, updates, and content guidance" },
-                    { text: "Monthly content recommendations" }
+                    { text: "Monthly content recommendations" },
+                    { text: "Two rounds of revisions per content item, within the agreed brief." }
                   ].map((feature, i) => (
                     <li key={i} className="flex gap-3 items-start text-left">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -169,7 +171,8 @@ export default function Services() {
                     { text: "4 additional Social Posts (16 total per month)", label: "Social Snippet Stack™" },
                     { text: "VIP Priority Support", label: "Fastest response times, quicker revisions, and premium client priority" },
                     { text: "Optional monthly Google Meet for strategy/performance review (on request)" },
-                    { text: "Monthly content growth plan + expansion recommendations" }
+                    { text: "Monthly content growth plan + expansion recommendations" },
+                    { text: "Two rounds of revisions per content item, within the agreed brief." }
                   ].map((feature, i) => (
                     <li key={i} className="flex gap-3 items-start text-left">
                       <Shield className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -485,8 +488,12 @@ export default function Services() {
                 a: "About one week. You fill out a simple onboarding form covering your services, voice, and target areas — no calls required — and we deliver your first content in the second week."
               },
               {
+                q: "What if I need changes to my content?",
+                a: "Every package includes two rounds of revisions per content item, covering adjustments to wording, tone, clarity, and emphasis within the agreed brief. Please send one consolidated set of feedback within seven business days of receiving each draft or revised version. Additional rounds or changes to the original brief are quoted separately and agreed with you before work begins. Corrections to errors we introduce do not count toward your revision allowance."
+              },
+              {
                 q: "Who reviews and publishes the content?",
-                a: "We handle the research and writing. You review the finished content for business-specific details, accuracy, offers, and any important updates before publishing. You don't need to write the content yourself, but you remain in control of final approval and publishing."
+                a: "You don’t need to write anything—we handle the research, drafting, and editing. You review the content before publishing to confirm that it reflects your business and that details such as services, prices, offers, and service areas are accurate. If you need changes, two revision rounds per content item are included."
               },
               {
                 q: "What if I want to cancel?",
